@@ -1,0 +1,10 @@
+@font-face {
+    font-family: "Druk Wide";
+    src: url("./fonts/Druk\ Wide\ Medium.otf") format("opentype");
+    font-weight: 500;
+}
+@font-face {
+    font-family: "Druk Wide";
+    src: url("./fonts/Druk\ Wide\ Bold.otf") format("opentype");
+    font-weight: bold;
+}
