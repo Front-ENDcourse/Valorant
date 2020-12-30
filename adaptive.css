@@ -1,0 +1,37 @@
+@media (max-width: 1497px) {
+    .user-profile {
+        position: absolute;
+        right: 50px;
+    }
+    nav {
+        margin-top: 20px;
+        display: flex;
+        flex-basis: 100%;
+    }
+    
+@media (max-width: 681px) {
+    ul {
+        width: 100%;
+        column-count: 2;
+    }
+    li {
+        width: 50%;
+    }
+}
+@media (max-width: 461px) {
+    .user-profile {
+        position: static;
+        margin-left: 20px;
+    }
+    nav {
+        margin-top: 20px;
+        margin-left: 0;
+        flex-basis: 100%;
+    }
+    ul {
+        column-count: auto;
+    }
+    li {
+        display: block;
+    }
+}

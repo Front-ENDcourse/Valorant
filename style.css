@@ -11,13 +11,14 @@ a {
     text-decoration: none;
 }
 nav {
-    vertical-align: middle;
+    flex-grow: 1;
+    margin-left: 20px;
 }
 nav a {
     color: #fff;
 }
 nav a:hover {
-    color: blueviolet;
+    color: #f56565;
     transition: .3s;
 }
 
@@ -35,7 +36,6 @@ header {
     display: flex;
     flex-wrap: wrap;
     box-sizing: border-box;
-    justify-content: space-around;
 }
 .background-circle {
     position: absolute;
@@ -46,25 +46,29 @@ header {
     border-radius: 35px;
     overflow: hidden;
 }
-
 .logo a {
     display: inline-block;
 }
 .logo-company {
-    padding-right: 50px;
+    margin-right: 30px;
+}
+.delimiter-logo {
     border-right: 2px solid #fff;
+    height: 100%;
+    display: inline-block;
 }
 .logo-company:hover {
    opacity: 0.5;
    transition: .3s;
 }
 .logo-game {
-    padding: 0 20px;
+    margin-left: 30px;
 }
 .logo-game:hover {
     opacity: 0.5;
     transition: .3s;
 }
+
 .user-profile a {
 display: flex;
 align-items: center;
@@ -85,7 +89,6 @@ align-items: center;
     font-size: 14px;
 }
 .user-nickname:hover {
-    color: blueviolet;
+    color: #f56565;
     transition: .3s;
 }
-
