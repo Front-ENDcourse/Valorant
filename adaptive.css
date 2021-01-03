@@ -8,7 +8,7 @@
         display: flex;
         flex-basis: 100%;
     }
-    
+}
 @media (max-width: 681px) {
     ul {
         width: 100%;
@@ -18,6 +18,7 @@
         width: 50%;
     }
 }
+
 @media (max-width: 461px) {
     .user-profile {
         position: static;
@@ -35,3 +36,4 @@
         display: block;
     }
 }
+@media ()

@@ -10,6 +10,20 @@ body {
 a {
     text-decoration: none;
 }
+li {
+    list-style: none;
+    display: inline-block;
+}
+
+/* Header wrapper */
+
+header {
+    background: #1F2326;
+    padding: 40px 50px;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
 nav {
     flex-grow: 1;
     margin-left: 20px;
@@ -21,22 +35,27 @@ nav a:hover {
     color: #f56565;
     transition: .3s;
 }
-
-li {
-    list-style: none;
-    display: inline-block;
+nav li {
     font-weight: bold;
     font-size: 14px;
     text-transform: uppercase;
     padding: 10px 20px;
 }
-header {
-    background: #1F2326;
-    padding: 40px 50px;
+
+/* Main wrapper */
+
+main {
     display: flex;
-    flex-wrap: wrap;
-    box-sizing: border-box;
+    background: url(./img/background.png)no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+    padding: 50px 4%;
+    /* timing parameters */
+    position: relative;
 }
+
+/* Header wrapper */
+
 .background-circle {
     position: absolute;
 }
@@ -91,4 +110,87 @@ align-items: center;
 .user-nickname:hover {
     color: #f56565;
     transition: .3s;
+}
+
+/* Main wrapper */
+
+.hero-page {
+    font-family: "Druk Wide",'Montserrat','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    font-size: 156px;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #fff;
+    color: rgba(255, 255, 255, 0);
+    letter-spacing: 15px;
+    writing-mode: vertical-lr;
+}
+.hero-wrapper {
+    flex: 1 1 1000px;
+    display: inline-flex;
+    vertical-align: top;
+    overflow-x: auto;
+}
+.hero-card {
+    flex: 1 0 440px;
+    margin: 0 40px;
+    background: #1F2326;
+    max-width: 440px;
+    max-height: 990px;
+    position: relative;
+    border-top-left-radius: 10px;
+}
+
+
+/* Heroes image setting */
+
+.hero-image-phoenix {
+    background-image: url(./img/Phoenix.png);
+}
+.hero-image-jett {
+    background-image: url(./img/Jett.png);
+}
+.hero-image-sova {
+    background-image: url(./img/Sova.png);
+}
+.hero-image-sage {
+    background-image: url(./img/Sage.png);
+}
+.hero-name {
+    font-family: "Druk Wide",'Montserrat','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    font-size: 72px;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #fff;
+    color: rgba(255, 255, 255, 0);
+    writing-mode: vertical-lr;
+    letter-spacing: 15px;
+    display: inline-block;
+    margin-left: -30px;
+}
+.hero-country {
+    font-family: "Druk Wide",'Montserrat','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 3px;
+    color: #FF4656;
+    font-size: 24px;
+    writing-mode: vertical-lr;
+}
+.hero-ability {
+    position: absolute;
+    bottom: -20px;
+    width: 440px;
+    height: 110px;
+    background: #1F2326;
+    border: 2px solid #fff;
+}
+.ability {
+    width: 40px;
+    height: 40px;
+}
+
+/* Style active card */
+
+.active-text {
+    background: none;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
 }
