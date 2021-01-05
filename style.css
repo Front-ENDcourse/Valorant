@@ -49,7 +49,7 @@ main {
     background: url(./img/background.png)no-repeat;
     background-size: 100%;
     background-attachment: fixed;
-    padding: 50px 4%;
+    padding: 6% 4%;
     /* timing parameters */
     position: relative;
 }
@@ -114,7 +114,7 @@ align-items: center;
 
 /* Main wrapper */
 
-.hero-page {
+.hero-page-header {
     font-family: "Druk Wide",'Montserrat','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 500;
     font-size: 156px;
@@ -125,35 +125,37 @@ align-items: center;
     writing-mode: vertical-lr;
 }
 .hero-wrapper {
-    flex: 1 1 1000px;
+    flex: 1 0;
     display: inline-flex;
     vertical-align: top;
     overflow-x: auto;
+    padding-bottom: 40px;
+
 }
 .hero-card {
     flex: 1 0 440px;
-    margin: 0 40px;
+    margin: 0 70px;
     background: #1F2326;
     max-width: 440px;
-    max-height: 990px;
+    height: 990px;
     position: relative;
-    border-top-left-radius: 10px;
+    border-top-left-radius: 20px;
 }
 
 
 /* Heroes image setting */
 
 .hero-image-phoenix {
-    background-image: url(./img/Phoenix.png);
+    background-image: url(./img/Phoenix.png) !important;
 }
 .hero-image-jett {
-    background-image: url(./img/Jett.png);
+    background-image: url(./img/Jett.png) !important;
 }
 .hero-image-sova {
-    background-image: url(./img/Sova.png);
+    background-image: url(./img/Sova.png) !important;
 }
 .hero-image-sage {
-    background-image: url(./img/Sage.png);
+    background-image: url(./img/Sage.png) !important;
 }
 .hero-name {
     font-family: "Druk Wide",'Montserrat','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -165,7 +167,8 @@ align-items: center;
     writing-mode: vertical-lr;
     letter-spacing: 15px;
     display: inline-block;
-    margin-left: -30px;
+    margin-top: 40px;
+    margin-left: -45px;
 }
 .hero-country {
     font-family: "Druk Wide",'Montserrat','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -173,19 +176,58 @@ align-items: center;
     color: #FF4656;
     font-size: 24px;
     writing-mode: vertical-lr;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 40px;
+    margin-left: -15px;
 }
+
+/* ability settings */
+
 .hero-ability {
     position: absolute;
-    bottom: -20px;
+    bottom: -35px;
+    left: 35px;
     width: 440px;
     height: 110px;
     background: #1F2326;
     border: 2px solid #fff;
+    padding: 15px 20px;
+    box-sizing: border-box;
 }
-.ability {
-    width: 40px;
-    height: 40px;
+.hero-ability li {
+    width: 75px;
+    height: 75px;
+    margin: 0 10px;
 }
+.ability-phoenix {
+    background: url(./img/ability-phoenix.png) no-repeat;
+}
+.ability-jett {
+    background: url(./img/ability-jett.png) no-repeat;
+    background-position-y: 7px;
+}
+.ability-sova {
+    background: url(./img/ability-sova.png) no-repeat;
+    background-position-y: 9px;
+}
+.ability-sage {
+    background: url(./img/ability-sage.png) no-repeat;
+    background-position-y: 12px;
+}
+.basic {
+    background-position-x: 8px;
+}
+.signature {
+    background-position-x: -114px;
+}
+.ultimate {
+    background-position-x: -234px;
+}
+.passive {
+    background-position-x: -353px;
+}
+
 
 /* Style active card */
 
@@ -193,4 +235,11 @@ align-items: center;
     background: none;
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: black;
+}
+.active {
+    background-color: #fff;
+}
+.active-ability {
+    border: 2px solid black;
+    background-color: #fff;
 }
