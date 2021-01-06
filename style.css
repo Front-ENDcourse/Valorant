@@ -47,11 +47,9 @@ nav li {
 main {
     display: flex;
     background: url(./img/background.png)no-repeat;
-    background-size: 100%;
-    background-attachment: fixed;
-    padding: 6% 4%;
-    /* timing parameters */
+    padding: 4% 4%;
     position: relative;
+    flex-wrap: wrap;
 }
 
 /* Header wrapper */
@@ -59,7 +57,7 @@ main {
 .background-circle {
     position: absolute;
 }
-.wrapper {
+.content-wrapper {
     margin: 50px auto;
     max-width: 2660px;
     border-radius: 35px;
@@ -87,10 +85,9 @@ main {
     opacity: 0.5;
     transition: .3s;
 }
-
 .user-profile a {
-display: flex;
-align-items: center;
+    display: flex;
+    align-items: center;
 }
 .user-profile-image {
     border-radius: 50%;
@@ -123,39 +120,46 @@ align-items: center;
     color: rgba(255, 255, 255, 0);
     letter-spacing: 15px;
     writing-mode: vertical-lr;
+    text-transform: uppercase;
 }
 .hero-wrapper {
     flex: 1 0;
     display: inline-flex;
     vertical-align: top;
     overflow-x: auto;
-    padding-bottom: 40px;
-
+    padding-bottom: 20px;
+}
+.card-wrapper {
+    flex: 1 0 440px;
+    margin: 0 50px;
 }
 .hero-card {
-    flex: 1 0 440px;
-    margin: 0 70px;
+    max-width: 440px;
     background: #1F2326;
     max-width: 440px;
     height: 990px;
-    position: relative;
     border-top-left-radius: 20px;
 }
-
 
 /* Heroes image setting */
 
 .hero-image-phoenix {
-    background-image: url(./img/Phoenix.png) !important;
+    background-image: url(./img/Phoenix.png);
+    background-repeat: no-repeat;
 }
 .hero-image-jett {
-    background-image: url(./img/Jett.png) !important;
+    background-image: url(./img/Jett.png);
+    background-repeat: no-repeat;
+
 }
 .hero-image-sova {
-    background-image: url(./img/Sova.png) !important;
+    background-image: url(./img/Sova.png);
+    background-repeat: no-repeat;
 }
 .hero-image-sage {
-    background-image: url(./img/Sage.png) !important;
+    background-image: url(./img/Sage.png);
+    background-repeat: no-repeat;
+
 }
 .hero-name {
     font-family: "Druk Wide",'Montserrat','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -165,10 +169,11 @@ align-items: center;
     -webkit-text-stroke-color: #fff;
     color: rgba(255, 255, 255, 0);
     writing-mode: vertical-lr;
-    letter-spacing: 15px;
+    letter-spacing: 5px;
     display: inline-block;
     margin-top: 40px;
     margin-left: -45px;
+    text-transform: uppercase;
 }
 .hero-country {
     font-family: "Druk Wide",'Montserrat','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -185,9 +190,8 @@ align-items: center;
 /* ability settings */
 
 .hero-ability {
-    position: absolute;
-    bottom: -35px;
-    left: 35px;
+    margin-top: -80px;
+    margin-left: 20px;
     width: 440px;
     height: 110px;
     background: #1F2326;
@@ -211,6 +215,11 @@ align-items: center;
     background: url(./img/ability-sova.png) no-repeat;
     background-position-y: 9px;
 }
+.text-hiden span {
+    visibility: hidden;
+    color: #fff;
+    font-size:1px;
+}
 .ability-sage {
     background: url(./img/ability-sage.png) no-repeat;
     background-position-y: 12px;
@@ -228,6 +237,106 @@ align-items: center;
     background-position-x: -353px;
 }
 
+/* Descriptions ability */
+
+.descriptions-ability {
+    flex: 0 1 100%;
+    display: flex;
+    margin-top: 60px;
+    margin-bottom: -180px;
+    overflow-x: auto;
+}
+.descriptions-ability-sage {
+    clip-path: polygon(2% 0px, 100% 0px, 100% 100%, 0px 100%, 0px 4%);
+    background-color: #1F2326;
+    max-width: 724px;
+    height: 248px;
+    flex: 1 0 724px;
+    position: relative;
+    padding: 3px;
+    margin-right: 60px;
+}
+.descriptions-ability-sage::before {
+    content: "";
+    width: 724px;
+    height: 248px;
+    background-color: #fff;
+    position: absolute;
+    z-index: -1;
+    clip-path: polygon(2% 0px, 100% 0px, 100% 100%, 0px 100%, 0px 4%);
+}
+.descriptions-ability-sage::after {
+    content: " ";
+    width: 190px;
+    height: 182px;
+    background-color: #FF4656;
+    position: absolute;
+    right: 121px;
+    bottom: 3px;
+    z-index: -1;
+}
+.description-text {
+    display: inline-block;
+    vertical-align: top;
+    padding: 30px 60px;
+    position: relative;
+}
+.ability-type {
+    text-transform: uppercase;
+    font-family: "Druk Wide", 'Montserrat','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 40px;
+    color: #C4C4C4;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.ability-name {
+    font-family: "Druk Wide", 'Montserrat','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 24px;
+    display: block;
+    margin-bottom: 20px;
+}
+.description {
+    display: block;
+    font-family: 'Montserrat','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    letter-spacing: 2px;
+    width: 350px;
+}
+.ability-image {
+    margin-top: 30px;
+    position: relative;
+}
+.ability-demonstration {
+    width: 219px;
+    height: 248px;
+    background-color: #1F2326;
+    clip-path: polygon(4% 0px, 100% 0px, 100% 100%, 0px 100%, 0px 4%);
+    padding: 3px;
+    position: relative;
+    flex: 1 0 219px;
+    overflow: hidden;
+}
+.ability-demonstration::before {
+    content: "";
+    width: 219px;
+    height: 248px;
+    background-color: #fff;
+    position: absolute;
+    z-index: -1;
+    clip-path: polygon(4% 0px, 100% 0px, 100% 100%, 0px 100%, 0px 4%);
+}
+.ability-demonstration a {
+    padding: 100px;
+    display: block;
+}
+.play-video {
+    width: 48px;
+}
+.bottom-line {
+    height: 132px;
+    background-color: #fff;
+    width: 100%;
+}
 
 /* Style active card */
 
