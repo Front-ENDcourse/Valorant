@@ -3,8 +3,7 @@
     padding: 0;
 }
 body {
-    /* background: #1F2326; */
-    background: #FF4656;
+    background: #1F2326;
     font-family: 'Montserrat','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 a {
@@ -21,10 +20,10 @@ header {
     background: #1F2326;
     padding: 40px 50px;
     display: flex;
-    flex-wrap: wrap;
     box-sizing: border-box;
 }
 nav {
+    display: flex;
     flex-grow: 1;
     margin-left: 20px;
 }
@@ -40,28 +39,84 @@ nav li {
     font-size: 14px;
     text-transform: uppercase;
     padding: 10px 20px;
+    white-space: nowrap;
 }
 
 /* Main wrapper */
 
 main {
     display: flex;
-    background: url(./img/background.png)no-repeat;
+    background-color: #FF4656;
+    background-image: url(./img/background.png);
+    background-repeat: no-repeat;
     padding: 4% 4%;
     position: relative;
     flex-wrap: wrap;
 }
 
-/* Header wrapper */
+/* Background circle */
 
 .background-circle {
     position: absolute;
+    height: 1920px;
+    width: 100%;
+    overflow: hidden;
+    margin-top: -100px;
 }
+.big-circle {
+    position: absolute;
+    width: 3000px;
+    height: 2500px;
+    background: #FF4656;
+    top: -1500px;
+    left: -1000px;
+    border-radius: 50%;
+    transform: rotate(60deg);
+    z-index: -1;
+}
+.big-circle::after {
+    content: "";
+    position: absolute;
+    width: 1500px;
+    height: 1500px;
+    background: #292C31;
+    bottom: 1495px;
+    right: -2256px;
+    border-radius: 50%;
+}
+.little-circle {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    position: absolute;
+    left: 40px;
+    bottom: -150px;
+    background-color: #fff;
+    z-index: -1;
+}
+.little-circle::after {
+    content: "";
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    position: absolute;
+    right: -2770px;
+    top: -1721px;
+    background-color: #fff;
+}
+
+/* Header wrapper */
+
 .content-wrapper {
-    margin: 50px auto;
+    margin: 100px auto;
     max-width: 2660px;
     border-radius: 35px;
     overflow: hidden;
+}
+.logo {
+    display: flex;
+    flex-wrap: nowrap;
+    max-height: 44px;
 }
 .logo a {
     display: inline-block;
@@ -103,6 +158,7 @@ main {
     margin-left: 10px;
     font-weight: bold;
     font-size: 14px;
+    white-space: nowrap;
 }
 .user-nickname:hover {
     color: #f56565;
