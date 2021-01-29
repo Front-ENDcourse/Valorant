@@ -1,3 +1,6 @@
+:root {
+    --main-bg-color: #f56565;
+}
 * {
     margin: 0;
     padding: 0;
@@ -76,9 +79,6 @@ h3 {
     font-weight: 500;
     margin-bottom: 20px;
 }
-:root {
-    --main-bg-color: #f56565;
-}
 
 /* Main wrapper */
 
@@ -151,7 +151,7 @@ main {
     vertical-align: middle;
 }
 nav ul li a:hover i {
-    color: #FF4656;
+    color: #ff4656;
 }
 .content-wrapper {
     margin: 0 auto;
@@ -252,7 +252,7 @@ nav ul li a:hover i {
 .hero-country {
     font-family: "Druk Wide",'Montserrat','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     letter-spacing: 3px;
-    color: #FF4656;
+    color: #ff4656;
     font-size: 24px;
     writing-mode: vertical-lr;
     display: inline-block;
