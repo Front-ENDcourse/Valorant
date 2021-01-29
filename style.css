@@ -160,15 +160,16 @@ nav ul li a:hover i {
 .logo {
     display: flex;
     flex-wrap: nowrap;
+    max-height: 44px;
 }
 .logo-company {
     margin-right: 30px;
+    max-height: 44px;
 }
 .delimiter-logo {
     border-right: 2px solid #fff;
     height: 100%;
     display: inline-block;
-    max-height: 44px;
 }
 .logo-company:hover {
    opacity: 0.5;
